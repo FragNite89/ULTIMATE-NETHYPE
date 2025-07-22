@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NETHYPE</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -14,29 +14,29 @@
       <a href="#">Movies</a>
       <a href="#">Series</a>
     </nav>
-    <img src="profile.jpg" alt="Profile" class="profile-icon" />
+    <img src="profile.jpg" alt="Profile" class="profile-icon">
   </header>
 
   <div id="auth-toggle">
-    <button onclick="toggleAuthForm('login')">Login</button>
-    <button onclick="toggleAuthForm('register')">Register</button>
+    <button type="button" onclick="toggleAuthForm('login')">Login</button>
+    <button type="button" onclick="toggleAuthForm('register')">Register</button>
   </div>
 
-  <button id="logout-button" onclick="logoutUser()" style="display:none;">Logout</button>
+  <button id="logout-button" type="button" onclick="logoutUser()" style="display:none;">Logout</button>
 
-  <div class="auth-container" id="login-form">
+  <div class="auth-container" id="login-form" style="display:none;">
     <h2>Login to NETHYPE</h2>
     <input type="email" id="login-email" placeholder="Email" required>
     <input type="password" id="login-password" placeholder="Password" required>
-    <button onclick="loginUser()">Login</button>
+    <button type="button" onclick="loginUser()">Login</button>
   </div>
 
-  <div class="auth-container" id="register-form">
+  <div class="auth-container" id="register-form" style="display:none;">
     <h2>Register for NETHYPE</h2>
     <input type="text" id="register-name" placeholder="Name" required>
     <input type="email" id="register-email" placeholder="Email" required>
     <input type="password" id="register-password" placeholder="Password" required>
-    <button onclick="registerUser()">Register</button>
+    <button type="button" onclick="registerUser()">Register</button>
   </div>
 
   <section class="media-container" id="recommended-movies"></section>
