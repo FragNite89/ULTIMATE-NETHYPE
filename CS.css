@@ -1,13 +1,13 @@
+/* Universal box-sizing for layout consistency */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #141414;
   color: #fff;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
 }
 
 header {
@@ -35,8 +35,11 @@ nav a {
   transition: color 0.2s;
 }
 
-nav a:hover, nav a:focus {
+nav a:hover,
+nav a:focus {
   color: #e50914;
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
 }
 
 .profile-icon {
@@ -52,6 +55,7 @@ nav a:hover, nav a:focus {
   background: #1f1f1f;
   padding: 2rem;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .auth-container input,
@@ -73,6 +77,8 @@ nav a:hover, nav a:focus {
 .auth-container button:hover,
 .auth-container button:focus {
   background: #b00610;
+  outline: 2px solid #e50914;
+  outline-offset: 2px;
 }
 
 #auth-toggle {
@@ -92,4 +98,5 @@ nav a:hover, nav a:focus {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
+  overflow: hidden;
 }
