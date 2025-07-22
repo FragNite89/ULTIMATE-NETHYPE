@@ -3,6 +3,11 @@ body {
   font-family: Arial, sans-serif;
   background-color: #141414;
   color: #fff;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 header {
@@ -27,12 +32,18 @@ nav {
 nav a {
   color: #fff;
   text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover, nav a:focus {
+  color: #e50914;
 }
 
 .profile-icon {
   width: 36px;
   height: 36px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .auth-container {
@@ -55,6 +66,13 @@ nav a {
   color: #fff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-container button:hover,
+.auth-container button:focus {
+  background: #b00610;
 }
 
 #auth-toggle {
